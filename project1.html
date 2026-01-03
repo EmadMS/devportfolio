@@ -2,53 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Project Alpha Case Study</title>
+    <title>ScanFaith | Case Study</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <a href="index.html" class="back-btn">← RETURN TO BASE</a>
+    <a href="index.html" class="back-btn">← RETURN TO HOME PAGE</a>
 
     <section class="section" style="padding-top: 150px;">
-        <h1 class="metal-text" style="font-size: 6rem;">CYBER DUST</h1>
-        <p style="font-size: 1.5rem; color: #888;">IMMERSIVE 3D WEB EXPERIENCE</p>
+        <h1 class="metal-text" style="font-size: 6rem;">SCAN FAITH</h1>
+        <p style="font-size: 1.5rem; color: #888;">NEXT-GEN DIETARY SCANNER</p>
 
         <div class="case-study-split">
             <div class="project-info">
+                
+                <div style="margin-bottom: 40px;">
+                    <h3>THE PROJECT</h3>
+                    <p style="line-height: 1.6; margin-top: 10px;">
+                        "Eat Pure. Live Pure."<br><br>
+                        ScanFaith is a web-based utility that helps users instantly identify Halal, Haram, or Doubtful products. It runs directly in the browser—no App Store download required—utilizing a high-performance Python backend and a custom "Glassmorphism" UI for a premium user experience.
+                    </p>
+                </div>
+
                 <div style="margin-bottom: 40px;">
                     <h3>THE OBJECTIVE</h3>
                     <p style="line-height: 1.6; margin-top: 10px;">
-                        To build a portfolio piece that pushes the boundaries of WebGL in the browser. The goal was to create a particle system that reacts to mouse movement without lagging on mobile devices.
+                        To build a privacy-first, intelligent analysis tool that automates dietary verification. The goal was to interface with the Open Food Facts API to flag specific non-halal additives (like E-codes, Gelatin, and Ethanol) in real-time.
                     </p>
                 </div>
 
                 <div style="margin-bottom: 40px;">
                     <h3>THE TECH STACK</h3>
                     <ul class="tech-stack" style="margin-top: 10px;">
-                        <li>React.js Framework</li>
-                        <li>Three.js / React-Fiber</li>
-                        <li>GSAP for timeline animations</li>
-                        <li>GLSL Shaders</li>
+                        <li>Python (Flask) Backend</li>
+                        <li>Open Food Facts API (Data Source)</li>
+                        <li>GSAP (Fluid Animations)</li>
+                        <li>HTML5-Qrcode (Camera Logic)</li>
                     </ul>
                 </div>
 
                 <div style="margin-bottom: 40px;">
-                    <h3>CHALLENGES</h3>
+                    <h3>KEY LEARNINGS</h3>
                     <p style="line-height: 1.6; margin-top: 10px;">
-                        Optimizing the particle count was difficult. I had to use instanced meshes to keep the draw calls low, ensuring a steady 60FPS.
+                        This project deepened my understanding of <strong>API integration</strong> and data filtering. I learned how to build custom algorithms to parse complex ingredient lists against a curated database of "Haram" keywords while maintaining privacy by keeping history local.
                     </p>
                 </div>
 
-                <a href="https://github.com/yourusername/project-repo" target="_blank" class="github-full-btn">
+                <div style="margin-bottom: 40px;">
+                    <h3>CHALLENGES & SOLUTIONS</h3>
+                    <p style="line-height: 1.6; margin-top: 10px;">
+                        <strong>The Challenge:</strong> Mobile Browser Security. Modern mobile browsers block camera access on insecure (HTTP) connections, making local testing difficult.
+                        <br><br>
+                        <strong>The Solution:</strong> I learned to deploy the app to secure environments (like Render) and used <strong>ngrok</strong> to create HTTPS tunnels during development, ensuring the barcode scanner worked seamlessly on actual mobile devices.
+                    </p>
+                </div>
+
+                <a href="https://github.com/EmadMS/scanfaith" target="_blank" class="github-full-btn">
                     VIEW SOURCE CODE ON GITHUB
                 </a>
             </div>
 
             <div class="project-gallery">
-                <img src="images/ScanFaith1.png" alt="Screenshot 1">
-                <img src="images/ScanFaith2.png" alt="Screenshot 2">
-                <img src="images/ScanFaith3.png" alt="Screenshot 3">
+                <img src="images/ScanFaith1.png" alt="ScanFaith UI">
+                <img src="images/ScanFaith2.png" alt="ScanFaith Result Screen">
+                <img src="images/ScanFaith3.png" alt="Ingredient Breakdown">
             </div>
         </div>
     </section>
