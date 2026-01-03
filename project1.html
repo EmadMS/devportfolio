@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Alpha Case Study</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <a href="index.html" class="back-btn">← RETURN TO BASE</a>
+
+    <section class="section" style="padding-top: 150px;">
+        <h1 class="metal-text" style="font-size: 6rem;">CYBER DUST</h1>
+        <p style="font-size: 1.5rem; color: #888;">IMMERSIVE 3D WEB EXPERIENCE</p>
+
+        <div class="case-study-split">
+            <div class="project-info">
+                <div style="margin-bottom: 40px;">
+                    <h3>THE OBJECTIVE</h3>
+                    <p style="line-height: 1.6; margin-top: 10px;">
+                        To build a portfolio piece that pushes the boundaries of WebGL in the browser. The goal was to create a particle system that reacts to mouse movement without lagging on mobile devices.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 40px;">
+                    <h3>THE TECH STACK</h3>
+                    <ul class="tech-stack" style="margin-top: 10px;">
+                        <li>React.js Framework</li>
+                        <li>Three.js / React-Fiber</li>
+                        <li>GSAP for timeline animations</li>
+                        <li>GLSL Shaders</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 40px;">
+                    <h3>CHALLENGES</h3>
+                    <p style="line-height: 1.6; margin-top: 10px;">
+                        Optimizing the particle count was difficult. I had to use instanced meshes to keep the draw calls low, ensuring a steady 60FPS.
+                    </p>
+                </div>
+
+                <a href="https://github.com/yourusername/project-repo" target="_blank" class="github-full-btn">
+                    VIEW SOURCE CODE ON GITHUB
+                </a>
+            </div>
+
+            <div class="project-gallery">
+                <img src="images/ScanFaith1.png" alt="Screenshot 1">
+                <img src="images/ScanFaith2.png" alt="Screenshot 2">
+                <img src="images/ScanFaith3.png" alt="Screenshot 3">
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

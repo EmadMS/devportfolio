@@ -1,0 +1,287 @@
+/* --- GLOBAL VARIABLES --- */
+:root {
+    --bg-dark: #000000;
+    --bg-blue: #020617; 
+    --text-main: #ffffff;
+    --metal-gradient: linear-gradient(180deg, #ffffff 20%, #8892b0 50%, #3e4c6b 100%);
+    --font-head: 'Bebas Neue', sans-serif;
+    --font-body: 'Cinzel', serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    background: linear-gradient(to bottom right, var(--bg-dark), var(--bg-blue), var(--bg-dark));
+    color: var(--text-main);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    cursor: crosshair;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* --- LIQUID TEXT EFFECT (Subtle Flow) --- */
+.metal-text {
+    font-family: var(--font-head);
+    font-size: 8vw;
+    line-height: 0.9;
+    background: var(--metal-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.2));
+    transition: filter 0.3s;
+}
+/* Connects to the SVG in HTML */
+.metal-text:hover { filter: url(#liquid) drop-shadow(0 0 15px rgba(255,255,255,0.4)); }
+
+/* --- NAVIGATION (Chrome Gradient Button) --- */
+.liquid-nav {
+    position: fixed; 
+    top: 50%; 
+    right: 30px; 
+    transform: translateY(-50%);
+    width: 60px; 
+    height: 60px;
+
+    /* UPDATED: Bright White/Silver Gradient for visibility */
+    background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 50%, #ffffff 100%);
+    border: 1px solid #fff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Glow */
+
+    border-radius: 30px;
+    z-index: 999; 
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* EXPANDED STATE (Hover) */
+.liquid-nav:hover {
+    height: 450px; 
+    width: 250px; 
+    border-radius: 10px;
+
+    /* Switch back to BLACK background so white text links are readable */
+    background: #000; 
+    border-color: #fff; 
+    box-shadow: 0 0 30px rgba(255,255,255,0.1);
+}
+
+/* The Hamburger Icon Container */
+.nav-trigger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+/* The 3 Bars */
+.nav-trigger .bar {
+    width: 25px;
+    height: 2px;
+    
+    /* UPDATED: Black bars to contrast against the white button */
+    background-color: #000; 
+    display: block;
+}
+
+/* Hide bars when menu opens */
+.liquid-nav:hover .nav-trigger { opacity: 0; }
+
+/* The Links inside the menu */
+.nav-content {
+    opacity: 0; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px;
+    text-align: center; 
+    width: 100%; 
+    transition: opacity 0.4s 0.2s;
+}
+
+.liquid-nav:hover .nav-content { opacity: 1; }
+
+.nav-content a {
+    font-family: var(--font-head); 
+    font-size: 1.8rem; 
+    color: #888;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.nav-content a:hover { 
+    color: #fff; 
+    transform: scale(1.1); 
+    text-shadow: 0 0 10px #fff; 
+}
+
+/* --- SECTIONS --- */
+.section { 
+    padding: 100px 10%; 
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+}
+
+.section-title {
+    font-family: var(--font-head); 
+    font-size: 4rem; 
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.2); 
+    padding-bottom: 20px;
+}
+
+/* --- MAIN PAGE GRID (16:9 Youtube Size) --- */
+.project-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    gap: 40px; 
+}
+
+.project-card {
+    position: relative; 
+    width: 100%; 
+    aspect-ratio: 16 / 9; /* Forces YouTube Thumbnail shape */
+    border: 1px solid rgba(255,255,255,0.1); 
+    background: #050505;
+    overflow: hidden; 
+    display: block;
+}
+
+.image-wrapper { 
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+}
+
+.project-card img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    opacity: 0.6; 
+    filter: grayscale(100%);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover img { 
+    opacity: 1; 
+    filter: grayscale(0%); 
+    transform: scale(1.05); 
+}
+
+.card-info {
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%;
+    padding: 20px; 
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    transform: translateY(100%); 
+    transition: transform 0.4s ease-out; 
+    z-index: 2;
+}
+
+.project-card:hover .card-info { transform: translateY(0); }
+
+.card-info h3 { 
+    font-family: var(--font-head); 
+    font-size: 2.5rem; 
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5); 
+}
+
+/* --- PROJECT PAGE (Gallery & Hover Zoom) --- */
+.project-gallery img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    z-index: 10;
+    border-color: #fff;
+}
+
+/* --- REST OF STYLES (Info, Buttons, etc) --- */
+.price-row { 
+    display: flex; 
+    justify-content: space-between; 
+    font-size: 1.5rem; 
+    margin-bottom: 30px; 
+    border-bottom: 1px dashed #333; 
+    padding-bottom: 10px; 
+}
+
+.review-box { 
+    border-left: 3px solid #fff; 
+    padding-left: 20px; 
+    margin-bottom: 40px; 
+}
+
+.review-box p { font-style: italic; font-size: 1.4rem; opacity: 0.9; }
+.review-box cite { font-family: var(--font-head); color: #888; font-size: 1.2rem; }
+
+.back-btn { 
+    position: fixed; 
+    top: 30px; 
+    left: 30px; 
+    font-family: var(--font-head); 
+    font-size: 1.2rem; 
+    border: 1px solid #fff; 
+    padding: 10px 20px; 
+    border-radius: 50px; 
+    z-index: 100; 
+    mix-blend-mode: difference; 
+    transition: 0.3s; 
+}
+
+.back-btn:hover { background: #fff; color: #000; }
+
+.case-study-split { 
+    display: grid; 
+    grid-template-columns: 1fr 1.5fr; 
+    gap: 50px; 
+    margin-top: 50px; 
+}
+
+.tech-stack li { 
+    list-style: none; 
+    margin-bottom: 10px; 
+    font-size: 1.1rem; 
+}
+
+.tech-stack li::before { content: "►"; color: #555; margin-right: 10px; }
+
+.github-full-btn { 
+    display: block; 
+    width: 100%; 
+    padding: 20px; 
+    margin-top: 30px; 
+    background: #fff; 
+    color: #000; 
+    text-align: center; 
+    font-family: var(--font-head); 
+    font-size: 1.5rem; 
+    letter-spacing: 2px; 
+    transition: 0.3s; 
+}
+
+.github-full-btn:hover { background: #888; color: #fff; letter-spacing: 5px; }
+
+.svg-filter { position: absolute; width: 0; height: 0; }
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+    .project-grid { grid-template-columns: 1fr; }
+    .case-study-split { grid-template-columns: 1fr; }
+}

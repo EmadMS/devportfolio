@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emad Moeez Syed | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <svg class="svg-filter">
+        <defs>
+            <filter id="liquid">
+                <feTurbulence type="fractalNoise" baseFrequency="0.002 0.005" numOctaves="3" seed="2" result="noise"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="15" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+        </defs>
+    </svg>
+
+    <nav class="liquid-nav">
+        <div class="nav-trigger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="nav-content">
+            <a href="index.html">Home</a>
+            <a href="info.html">Profile</a>
+            <a href="info.html#pricing">Pricing</a>
+            <a href="info.html#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="section" style="min-height: 70vh; align-items: center; text-align: center; padding-bottom: 0;">
+        <h1 class="metal-text">PROJECTS<br>IN MOTION</h1>
+        <p style="margin-top: 20px; font-size: 1.2rem; letter-spacing: 0.3em; opacity: 0.7;">
+            CREATIVE DEVELOPER // FULL STACK
+        </p>
+    </section>
+
+    <section class="section" style="padding-top: 20px; min-height: auto; justify-content: center;">
+        <h2 class="section-title">01. ABOUT ME</h2>
+        
+        <div style="max-width: 900px;">
+            <p style="font-size: 1.8rem; line-height: 1.4; color: #ccc; margin-bottom: 20px;">
+                I am <span style="color: #fff; font-family: var(--font-head);">Emad Moeez Syed</span>.
+            </p>
+            
+            <p style="font-size: 1.3rem; line-height: 1.6; color: #888; margin-bottom: 40px;">
+                I am an 18-year-old developer currently studying IT at <span style="color: #fff;">Uxbridge College</span>. 
+                I focus on building practical, real-world tech projects and improving my skills across modern development tools.
+                <br><br>
+                My experience includes Python, JavaScript, React, Node.js, and C++. I enjoy working on projects that are simple, efficient, and useful, with an emphasis on clean structure and logical thinking.
+            </p>
+
+            <div style="margin-top: 30px;">
+                <p style="font-family: var(--font-head); font-size: 1.2rem; color: #555; margin-bottom: 15px;">TECHNICAL SKILLS</p>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <span style="border: 1px solid #fff; color: #fff; padding: 10px 25px; border-radius: 50px; font-family: var(--font-head); letter-spacing: 1px;">PYTHON</span>
+                    <span style="border: 1px solid #fff; color: #fff; padding: 10px 25px; border-radius: 50px; font-family: var(--font-head); letter-spacing: 1px;">REACT & JS</span>
+                    <span style="border: 1px solid #fff; color: #fff; padding: 10px 25px; border-radius: 50px; font-family: var(--font-head); letter-spacing: 1px;">C / C++ / JAVA</span>
+                    
+                    <span style="border: 1px solid #444; color: #888; padding: 10px 25px; border-radius: 50px; font-family: var(--font-head); letter-spacing: 1px;">NETWORKING</span>
+                    <span style="border: 1px solid #444; color: #888; padding: 10px 25px; border-radius: 50px; font-family: var(--font-head); letter-spacing: 1px;">CYBERSECURITY</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">02. SELECTED WORKS</h2>
+        
+        <div class="project-grid">
+            
+            <a href="project1.html" class="project-card">
+                <div class="image-wrapper">
+                    <img src="images/ScanFaith.png" alt="Project 1">
+                </div>
+                <div class="card-info">
+                    <h3>SCAN FAITH</h3>
+                    <p>React / ThreeJS / WebGL</p>
+                </div>
+            </a>
+
+            <a href="project2.html" class="project-card">
+                <div class="image-wrapper">
+                    <img src="images/Netraxis.png" alt="Project 2">
+                </div>
+                <div class="card-info">
+                    <h3>NETRAXIS</h3>
+                    <p>NextJS / Tailwind / Stripe</p>
+                </div>
+            </a>
+
+            <a href="project3.html" class="project-card">
+                <div class="image-wrapper">
+                    <img src="images/SmartTravel.png" alt="Project 3">
+                </div>
+                <div class="card-info">
+                    <h3>SMART TRAVEL</h3>
+                    <p>Python / Django / AI</p>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
