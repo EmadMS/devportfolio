@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emad Moeez Syed | Designer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
+    </script>
+</head>
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <canvas id="webgl-canvas"></canvas>
+
+    <header>
+        <div class="logo">EMAD MS</div>
+        <button class="menu-btn">INDEX</button>
+    </header>
+
+    <div class="full-menu">
+        <a href="index.html">HOME</a>
+        <a href="info.html">THE ARCHITECT</a>
+        <a href="projects.html">THE ARCHIVE</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="https://github.com/EmadMS" target="_blank">GITHUB ↗</a>
+    </div>
+
+    <main class="container">
+        
+        <div style="margin: 20vh 0 30vh 0; text-align: center;" class="hero-text">
+            <h1>ENGINEERED<br>ELEGANCE</h1>
+            <p style="letter-spacing: 5px; text-transform: uppercase;"> Developer // Creative Technologist</p>
+        </div>
+
+        <div class="glass-panel">
+            <h2>THE ARCHITECT</h2>
+            <p>I am an 18-year-old developer currently studying IT at Uxbridge College. I focus on building practical, real-world tech projects and improving my skills across modern development tools.</p>
+            <p>My experience is vast, covering Python, JavaScript, React, Node.js, and C++. Beyond pure coding, I have a deep understanding of databases, networking, testing, and cybersecurity awareness.</p>
+            <div class="tech-tags">
+                <span>PYTHON</span><span>REACT</span><span>JAVASCRIPT</span><span>C++</span>
+            </div>
+            <a href="info.html" class="btn">VIEW FULL SPECS</a>
+        </div>
+
+        <div class="glass-panel">
+            <h2>SELECTED WORKS</h2>
+            <div class="featured-grid">
+                <a href="project1.html" class="featured-card">
+                    <img src="images/ScanFaithG.png" alt="ScanFaith" class="featured-img">
+                    <div class="featured-info">
+                        <h3>SCAN FAITH</h3><span>PYTHON / API</span>
+                    </div>
+                </a>
+                <a href="project2.html" class="featured-card">
+                    <img src="images/NetraxisG.png" alt="Netraxis" class="featured-img">
+                    <div class="featured-info">
+                        <h3>NETRAXIS</h3><span>CYBERSECURITY</span>
+                    </div>
+                </a>
+                <a href="project3.html" class="featured-card">
+                    <img src="images/hi.png" alt="SmartTravel" class="featured-img">
+                    <div class="featured-info">
+                        <h3>SMART TRAVEL</h3><span>DATA / API</span>
+                    </div>
+                </a>
+            </div>
+            <a href="projects.html" class="btn" style="margin-top: 40px;">VIEW FULL ARCHIVE</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p style="letter-spacing: 3px; margin-bottom: 0;">READY TO INITIATE A PROJECT?</p>
+        <a href="contact.html" class="footer-link">INITIATE CONTACT ↗</a>
+        
+        <div class="social-links">
+            <a href="https://github.com/EmadMS" target="_blank">GITHUB</a>
+            <a href="https://www.linkedin.com/in/emadms" target="_blank">LINKEDIN</a>
+            <a href="https://x.com/xFrostyDZN" target="_blank">TWITTER</a>
+        </div>
+        <p style="font-size: 0.9rem; color: #555; margin-top: 20px;">© 2026 EMAD MOEEZ SYED. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

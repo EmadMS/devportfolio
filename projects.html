@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emad | The Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
+    </script>
+</head>
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <canvas id="webgl-canvas"></canvas>
+
+    <header>
+        <div class="logo">EMAD MS</div>
+        <button class="menu-btn">INDEX</button>
+    </header>
+
+    <div class="full-menu">
+        <a href="index.html">HOME</a>
+        <a href="info.html">THE ARCHITECT</a>
+        <a href="projects.html">THE ARCHIVE</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="https://github.com/EmadMS" target="_blank">GITHUB ↗</a>
+    </div>
+
+    <main class="container">
+        
+        <div class="glass-panel" style="margin-top: 10vh;">
+            <h2 style="font-size: 5rem; border: none; margin-bottom: 0;">THE ARCHIVE</h2>
+            <p style="color: var(--accent); letter-spacing: 3px; margin-bottom: 40px;">SYSTEMS & DEPLOYMENTS</p>
+            
+            <h3 style="font-family: var(--font-head); font-size: 2.5rem; margin-top: 20px;">FEATURED BUILDS</h3>
+            <div class="featured-grid">
+                <a href="project1.html" class="featured-card">
+                    <img src="images/ScanFaithC.png" alt="ScanFaith" class="featured-img">
+                    <div class="featured-info">
+                        <h3>SCAN FAITH</h3><span>PYTHON / API / FLASK</span>
+                    </div>
+                </a>
+                <a href="project2.html" class="featured-card">
+                    <img src="images/NetraxisC.png" alt="Netraxis" class="featured-img">
+                    <div class="featured-info">
+                        <h3>NETRAXIS</h3><span>CYBERSECURITY / AI</span>
+                    </div>
+                </a>
+                <a href="project3.html" class="featured-card">
+                    <img src="images/SmartTravelC.png" alt="SmartTravel" class="featured-img">
+                    <div class="featured-info">
+                        <h3>SMART TRAVEL</h3><span>MAPPING API / DATA</span>
+                    </div>
+                </a>
+            </div>
+
+            <h3 style="font-family: var(--font-head); font-size: 2.5rem; margin-top: 60px;">ALL EXPERIMENTS</h3>
+            <div class="archive-list">
+                <a href="https://github.com/EmadMS/FootFall-Tracker" target="_blank" class="archive-row">
+                    <div class="archive-year">2026</div>
+                    <div class="archive-title">Footfall Tracker</div>
+                    <div class="archive-tech">PYTHON / YOLO</div>
+                </a>
+                <a href="https://github.com/EmadMS/BioLoop-AI" target="_blank" class="archive-row">
+                    <div class="archive-year">2026</div>
+                    <div class="archive-title">BioLoop AI</div>
+                    <div class="archive-tech">PYTHON / MACHINE LEARNING</div>
+                </a>
+                <a href="https://github.com/EmadMS/portfolio" target="_blank" class="archive-row">
+                    <div class="archive-year">2025</div>
+                    <div class="archive-title">PORTFOLIO V1</div>
+                    <div class="archive-tech">HTML / CSS / JS</div>
+                </a>
+                <a href="https://github.com/EmadMS/HeatLink-AI" target="_blank" class="archive-row">
+                    <div class="archive-year">2025</div>
+                    <div class="archive-title">HEATLINK AI</div>
+                    <div class="archive-tech">PYTHON / ALGORITHMS</div>
+                </a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

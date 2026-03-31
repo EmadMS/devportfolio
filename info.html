@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emad | The Architect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
+    </script>
+</head>
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <canvas id="webgl-canvas"></canvas>
+
+    <header>
+        <div class="logo">EMAD MS</div>
+        <button class="menu-btn">INDEX</button>
+    </header>
+
+    <div class="full-menu">
+        <a href="index.html">HOME</a>
+        <a href="info.html">THE ARCHITECT</a>
+        <a href="projects.html">THE ARCHIVE</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="https://github.com/EmadMS" target="_blank">GITHUB ↗</a>
+    </div>
+
+    <main class="container">
+        <div class="glass-panel" style="margin-top: 10vh;">
+            <h2 style="font-size: 5rem; border: none; margin-bottom: 0;">THE ARCHITECT</h2>
+            <p style="color: var(--accent); letter-spacing: 3px; margin-bottom: 40px;">BACKGROUND & SPECIFICATIONS</p>
+
+            <div class="profile-grid">
+                
+                <div class="image-column">
+                    <div class="profile-img-wrapper">
+                        <img src="images/IMG_7201.PNG" alt="Emad 1" class="profile-pic">
+                    </div>
+                    <div class="profile-img-wrapper">
+                        <img src="images/IMG_7210.PNG" alt="Emad 2" class="profile-pic">
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="font-family: var(--font-head); font-size: 2.5rem; margin-top: 0;">01 // PHILOSOPHY</h3>
+                    <p>I am an 18-year-old developer currently studying IT at Uxbridge College. I focus on building practical, real-world tech projects that bridge the gap between raw computational power and seamless human interaction.</p>
+                    
+                    <h3 style="font-family: var(--font-head); font-size: 2.5rem; margin-top: 30px;">02 // EDUCATION</h3>
+                    <p><strong>IT Student @ Uxbridge College</strong><br>
+                    Currently pursuing advanced studies in Information Technology, focusing on modern software development lifecycles and network infrastructure.</p>
+                </div>
+
+            </div>
+            <h3 style="font-family: var(--font-head); font-size: 2.5rem; margin-top: 40px;">03 // THE STACK</h3>
+            <p style="font-family: var(--font-head); font-size: 1.5rem; margin-bottom: 10px; color: #fff;">CORE LANGUAGES</p>
+            <div class="tech-tags" style="margin-bottom: 20px;">
+                <span>PYTHON</span><span>JAVASCRIPT</span><span>C++</span><span>WEB DEVELOPMENT</span>
+            </div>
+            
+            <div style="margin-top: 50px;">
+            <a href="contact.html" class="btn">HIRE ME</a>
+        </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

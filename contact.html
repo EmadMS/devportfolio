@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emad | Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
+    </script>
+</head>
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    
+    <canvas id="webgl-canvas"></canvas>
+
+    <header>
+        <a href="index.html" class="header-brand">
+            <div class="logo-mark">E</div> 
+            <span class="logo-text">EMAD MS</span>
+        </a>
+        <button class="menu-btn">INDEX</button>
+    </header>
+
+    <div class="full-menu">
+        <a href="index.html">HOME</a>
+        <a href="info.html">THE ARCHITECT</a>
+        <a href="projects.html">THE ARCHIVE</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="https://github.com/EmadMS" target="_blank">GITHUB ↗</a>
+    </div>
+
+    <main class="container">
+        <div class="glass-panel" style="margin-top: 10vh; max-width: 700px;">
+            
+            <h2 style="font-size: 5rem; border: none; margin-bottom: 0;">INITIATE CONTACT</h2>
+            <p style="color: var(--accent); letter-spacing: 3px; margin-bottom: 40px;">SECURE COMM LINK</p>
+
+            <div class="status-indicator">
+                <div class="dot"></div>
+                SYSTEMS ONLINE // READY TO RECEIVE
+            </div>
+
+            <p style="margin-bottom: 30px;">Whether you have a specific project in mind, need a systems architect, or just want to discuss modern software engineering, drop a transmission below. I monitor this frequency closely.</p>
+
+            <form class="contact-form" id="contact-form" action="https://formspree.io/f/xnjovkdo" method="POST">
+                
+                <input type="text" name="name" placeholder="YOUR NAME" class="input-field" required>
+                
+                <input type="email" name="email" placeholder="YOUR EMAIL" class="input-field" required>
+                
+                <textarea name="message" placeholder="PROJECT DETAILS / MESSAGE" class="input-field" required></textarea>
+                
+                <button type="submit" class="submit-btn" id="submit-btn">TRANSMIT MESSAGE</button>
+
+            </form>
+
+            <div id="form-status" style="display: none; color: #00ff88; font-family: var(--font-head); font-size: 1.5rem; letter-spacing: 2px; margin-top: 20px; text-align: center;">
+                TRANSMISSION SUCCESSFUL // AWAIT REPLY
+            </div>
+            
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Netraxis | Case Study</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
+    </script>
+</head>
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <canvas id="webgl-canvas"></canvas>
+
+    <header>
+        <a href="index.html" class="header-brand">
+            <div class="logo-mark">E</div> 
+            <span class="logo-text">EMAD MS</span>
+        </a>
+        <button class="menu-btn">INDEX</button>
+    </header>
+
+    <div class="full-menu">
+        <a href="index.html">HOME</a>
+        <a href="info.html">THE ARCHITECT</a>
+        <a href="projects.html">THE ARCHIVE</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="https://github.com/EmadMS" target="_blank">GITHUB ↗</a>
+    </div>
+
+    <main class="container">
+        <div class="glass-panel" style="margin-top: 10vh; max-width: 800px;">
+            
+            <h2 style="font-size: 5rem; border: none; margin-bottom: 0;">NETRAXIS</h2>
+            <p style="color: var(--accent); letter-spacing: 3px; margin-bottom: 40px;">CYBERSECURITY / AI HEURISTICS</p>
+
+            <h3 style="font-family: var(--font-head); font-size: 2.5rem; margin-top: 30px;">01 // THE OBJECTIVE</h3>
+            <p>To engineer an advanced cybersecurity defense mechanism that leverages artificial intelligence and heuristic analysis. The system is designed to autonomously monitor network traffic, detect anomalies, and flag potential zero-day threats in real-time before they execute.</p>
+
+            <h3 style="font-family: var(--font-head); font-size: 2.5rem; margin-top: 40px;">02 // THE TECH STACK</h3>
+            <div class="tech-tags" style="margin-bottom: 30px;">
+                <span>PYTHON</span><span>TENSORFLOW / AI</span><span>NETWORK SOCKETS</span><span>HEURISTICS</span>
+            </div>
+
+            <h3 style="font-family: var(--font-head); font-size: 2.5rem; margin-top: 40px;">03 // CORE ARCHITECTURE</h3>
+            <ul style="list-style-type: none; padding: 0; margin-bottom: 30px;">
+                <li style="margin-bottom: 15px; border-left: 2px solid var(--accent); padding-left: 15px;">
+                    <strong style="color: #fff;">Parallel Pipelines:</strong> Engineered to process high volumes of live network packet data without bottlenecking the host system's core CPU performance.
+                </li>
+                <li style="margin-bottom: 15px; border-left: 2px solid var(--accent); padding-left: 15px;">
+                    <strong style="color: #fff;">Heuristic Modeling:</strong> Moved beyond simple signature-based detection to analyze behavioral anomalies, allowing the system to identify previously unseen threat vectors.
+                </li>
+                <li style="margin-bottom: 15px; border-left: 2px solid var(--accent); padding-left: 15px;">
+                    <strong style="color: #fff;">Optimized AI Inference:</strong> Configured the TensorFlow model to run strictly on necessity, ensuring the monitoring layer remained lightweight and practically invisible to standard operations.
+                </li>
+            </ul>
+
+            <div style="margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px;">
+                <a href="https://github.com/EmadMS/Netraxis" target="_blank" class="btn">ACCESS SOURCE CODE ↗</a>
+            </div>
+            
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
